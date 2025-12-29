@@ -14,7 +14,7 @@ Su arquitectura **Arcodular** (Arc-Modular) divide la cognición en estructuras 
 ### 1. Vida Artificial vs. Estadística
 Genesis no es solo un multiplicador de matrices. Cada **GenulseCell** (neurona) tiene:
 *   **Estado interno persistente (Memoria a corto plazo)**.
-*   **Pesos rápidos (_fast)**: Aprendizaje instantáneo (One-shot learning).
+*   **Pesos rápidos (w_fast)**: Aprendizaje instantáneo (One-shot learning).
 *   **Pesos lentos (w_slow)**: Conocimiento consolidado (optimizados con BitNet: -1, 0, 1).
 *   **Homeostasis**: Decaimiento natural de la energía para evitar la saturación ("Leaky Integrate-and-Fire").
 
@@ -98,4 +98,5 @@ Si eres estudiante o investigador, siéntete libre de hacer fork y experimentar 
 
 **Autor:** [RGBcript](https://github.com/RGBcript)
 **Licencia:** MIT
+
 

@@ -1,0 +1,27 @@
+[package]
+name = "genesis_togenizer"
+version = "0.1.0"
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+xxhash-rust = { version = "0.8.7", features = ["xxh3"] }
+clap = { version = "4.4.11", features = ["derive"] }
+hex = "0.4.3"
+image = "0.25.2"
+hound = "3.5.1"
+wasm-bindgen = "0.2.93"
+console_error_panic_hook = "0.1.7"
+js-sys = "0.3.83"
+genulse_core = { version = "0.1.0", path = "../genulse_core" }
+
+[dependencies.web-sys]
+version = "0.3.69"
+features = [
+    "console",
+]

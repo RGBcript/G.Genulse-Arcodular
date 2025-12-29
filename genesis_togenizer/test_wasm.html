@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genesis Togenizer WASM Test</title>
+</head>
+<body>
+    <h1>Genesis Togenizer WASM Test</h1>
+    <div id="output"></div>
+    
+    <script type="module">
+        import init, { togen_from_string, togen_from_action } from './pkg/genesis_togenizer.js';
+        
+        async function run() {
+            await init();
+            
+            const output = document.getElementById('output');
+            
+            // Test text
+            const textResult = togen_from_string('Hola Mundo');
+            output.innerHTML += `<p>Text: ${textResult}</p>`;
+            
+            // Test action
+            const actionResult = togen_from_action('ClickLeft');
+            output.innerHTML += `<p>Action: ${actionResult}</p>`;
+            
+            console.log('WASM test completed successfully!');
+        }
+        
+        run().catch(console.error);
+    </script>
+</body>
+</html>

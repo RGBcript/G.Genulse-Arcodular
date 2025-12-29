@@ -1,0 +1,57 @@
+====================================================================
+BITÁCORA DE PROYECTO: GENESIS ARCODULAR v1.1
+FECHA: 29 Diciembre 2025 (Madrugada)
+ESTADO: OPERATIVO / RECUPERADO
+====================================================================
+
+1. INCIDENTE CRÍTICO
+--------------------
+- Evento: Apagón total del sistema durante la compilación.
+- Daño: Pérdida temporal de acceso al SSD y corrupción de archivos del workspace.
+- Acción: Ejecución de script de recuperación total (PowerShell) para regenerar estructura MAINI.
+
+2. ESTADO TÉCNICO ACTUAL
+--------------------
+- Workspace: 'MAINI' (Rust)
+- Crates integrados:
+  A. 'genesis_togenizer': Generación de IDs y Streams (Simulado).
+  B. 'genulse_core': Motor Neural ODE + BitNet (-1,0,1).
+  
+- Arquitectura Implementada (Genulse Arcodular):
+  1. GenulseCell: Pesos lentos (i8) + Pesos rápidos (f32) + Plasticidad Hebbiana.
+  2. Arcos Cognitivos:
+     - Amygdala (Seguridad/Pánico).
+     - VisualCortex (Convolución espacial 3x3).
+     - Hippocampus (Memoria).
+     - PrefrontalCortex (Inhibición ejecutiva).
+
+3. PRUEBA DE INTEGRACIÓN (Brain Test)
+--------------------
+- Archivo de prueba: genesis_togenizer/src/bin/brain_test.rs
+- Resultado: ÉXITO ROTUNDO.
+- Métricas observadas:
+  [T=0] Visual Activity: 8.0000 | Panic: true
+  ...
+  [T=4] Visual Activity: 83.9808 | Panic: true
+  
+- Interpretación:
+  - El sistema muestra "Explosión Hebbiana" (feedback positivo).
+  - La plasticidad está activa (los pesos cambian en tiempo real).
+  - La Amígdala detecta intensidad alta y dispara señal de pánico correctamente.
+  - El protocolo de sueño (Sleep) se ejecuta al final para consolidar memoria.
+
+4. CAMBIOS DE CÓDIGO CLAVE
+--------------------
+- Fix de codificación: Archivos convertidos a UTF-8 puro (sin tildes en comentarios).
+- Inicialización: Pesos w_slow iniciados en 1 (antes 0) para garantizar flujo de señal inicial.
+- Dependencias: Vinculación local (path) establecida entre togenizer y core.
+
+5. PRÓXIMOS PASOS
+--------------------
+- Implementar Homeostasis (frenos químicos) para evitar explosión infinita de valores (83.0 -> inf).
+- Conectar Togenizer real (lectura de imágenes reales) al VisualCortex.
+- Crear 'genesis_brain' para orquestar los 4 arcos en un bucle continuo.
+
+====================================================================
+FIN DEL REPORTE - SISTEMA LISTO PARA EVOLUCIÓN
+====================================================================

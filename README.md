@@ -79,8 +79,9 @@ cargo run
 - [x] **Fase 0:** Portar lógica de Python a Rust (`genulse`).
 - [x] **Fase 1:** Estructura de Workspace y compilación limpia.
 - [x] **Fase 2:** Integración de API Externa y Memoria (v1.2).
-- [ ] **Fase 3:** Input Sensorial Real (Conectar `genulse` al flujo de chat).
-- [ ] **Fase 4:** Persistencia a Largo Plazo (Base de datos vectorial / Archivos).
+- [ ] **Fase 3:** Input Sensorial Real (WGPU + Frontend).
+- [ ] **Fase 4:** **Broca's Arc (The Red Pill).** Implementación del *Symbol Grounding* biológico. Aprendizaje de lenguaje por asociación Hebbiana (Visual <-> Auditivo) sin LLMs.
+- [ ] **Fase 5:** Persistencia a Largo Plazo (Base de datos vectorial / Archivos).
 
 ### 🧪 Experimental: Aceleración por Hardware (WGPU)
 Se ha iniciado la integración preliminar de **WebGPU** en el núcleo `genulse`.

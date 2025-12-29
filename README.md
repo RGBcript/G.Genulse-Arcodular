@@ -63,7 +63,7 @@ Clona el repositorio y ejecuta el cerebro principal:
 
 ```bash
 git clone https://github.com/RGBcript/G.Genulse-Arcodular.git
-cd genesis-project/MAINI
+cd G.Genulse-Arcodular/MAINI
 
 # Ejecutar en modo release (recomendado para performance)
 cargo run --release -p genesis_brain

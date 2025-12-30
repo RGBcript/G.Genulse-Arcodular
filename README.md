@@ -1,29 +1,56 @@
-# 🧠 GENESIS — Neuromorphic AI System
-> *Code that lives.*
+# 🧠 GENESIS
+> **AGI Local. Biológica. Eficiente.**
 
-![Status](https://img.shields.io/badge/Status-Active_v1.2-green) ![Lang](https://img.shields.io/badge/Language-Rust-orange) ![Arch](https://img.shields.io/badge/Architecture-Arcodular-blue)
+```text
+   ______ ______ _   __ ______ _____ ____ _____
+  / ____// ____// | / // ____// ___//  _// ___/
+ / / __ / __/  /  |/ // __/   \__ \ / /  \__ \ 
+/ /_/ // /___ / /|  // /___  ___/ // /  ___/ / 
+\____//_____//_/ |_//_____/ /____//___//____/  
+```
 
-**Genesis** es un framework de Inteligencia Artificial Neuromórfica escrito en **Rust**. A diferencia de las redes neuronales profundas tradicionales (Deep Learning), Genesis simula procesos biológicos fundamentales como la **plasticidad hebbiana rápida**, la **homeostasis química** y la **consolidación de memoria durante el sueño** (Sleep Protocol).
+![Status](https://img.shields.io/badge/Status-Active_v1.3-green) ![Lang](https://img.shields.io/badge/Language-Rust-orange) ![Arch](https://img.shields.io/badge/Architecture-Arcodular-blue)
 
-Su arquitectura **Arcodular** (Arc-Modular) divide la cognición en estructuras funcionales interconectadas ("Arcos"), permitiendo un comportamiento emergente complejo con una eficiencia computacional extrema.
+**Genesis no es otro chatbot.** Es un organismo digital que **siente, duerme y aprende** en tiempo real.
+Olvídate de las matrices estáticas. Genesis utiliza **Neurobiología Simulada** (Spiking Neural Networks + Homeostasis) para correr en tu CPU/GPU con una fracción de la energía de un LLM tradicional.
 
 ---
 
-## 🧬 Conceptos Clave
+## ⚡ Quick Start (En 30 segundos)
+
+### 1. El Cerebro (Backend)
+Clona y corre la simulación de conciencia:
+```bash
+git clone https://github.com/RGBcript/G.Genulse-Arcodular.git
+cd G.Genulse-Arcodular
+cargo run -p arcodular
+```
+*Verás los logs del ciclo cognitivo: Percibir -> Pensar -> Dormir.*
+
+### 2. Los Sentidos (Neuro-Link Frontend)
+Para ver el **Tablero Visual** y el **Grafo Neuronal**:
+```bash
+cd togen/www
+npm install
+npm run dev
+```
+*Abre `http://localhost:5173` y selecciona la pestaña "Neuro-Link".*
+
+---
+
+## 🧬 ¿Por qué Genesis?
 
 ### 1. Vida Artificial vs. Estadística
-Genesis no es solo un multiplicador de matrices. Cada **GenulseCell** (neurona) tiene:
-*   **Estado interno persistente (Memoria a corto plazo)**.
-*   **Pesos rápidos (`a_fast`)**: Aprendizaje instantáneo (One-shot learning).
-*   **Pesos lentos (`w_slow`)**: Conocimiento consolidado (optimizados con BitNet: -1, 0, 1).
-*   **Homeostasis**: Decaimiento natural de la energía para evitar la saturación ("Leaky Integrate-and-Fire").
+Genesis no predice el siguiente token. **Tiene estados internos.**
+*   **Memoria a Corto Plazo:** Recuerda el contexto sin re-procesar todo el historial.
+*   **Sueño (Sleep Protocol):** Consolida aprendizajes (`a_fast` -> `w_slow`) y limpia toxinas cognitivas.
+*   **Eficiencia:** Usa cuantización BitNet (-1, 0, 1) y Spiking Networks.
 
-### 2. El Ciclo Cognitivo
-El sistema opera en un bucle continuo de tiempo discreto:
-1.  **Perceive (Percibir):** Entrada de datos sensoriales crudos.
-2.  **Think (Pensar):** Procesamiento a través de los arcos visuales, emocionales y racionales.
-3.  **Panic Override:** Si la `Amygdala` detecta amenaza extrema, bloquea el `PrefrontalCortex`.
-4.  **Sleep (Dormir):** Periódicamente, el sistema entra en estado de sueño para transferir lo aprendido en el día (`a_fast`) a la memoria permanente (`w_slow`) y limpiar toxinas cognitivas.
+### 2. Arquitectura Arcodular
+El sistema no es un bloque monolítico. Es un grafo de **Arcos Cognitivos**:
+*   **Genulse (Física):** El motor de ecuaciones diferenciales.
+*   **Arcodular (Mente):** El orquestador de módulos.
+*   **Togen (Sentidos):** Protocolo de hashing multimodal (128-bit).
 
 ---
 
@@ -60,21 +87,19 @@ El proyecto implementa la arquitectura **Arcodular** (Arc-Modular), un diseño p
 
 ### Prerrequisitos
 1.  **Rust & Cargo:** `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-2.  *(Opcional pero recomendado)* **Ollama** corriendo localmente con un modelo (ej. `llama3`) para que el cerebro tenga "voz".
+2.  **Node.js & NPM:** Para el frontend Neuro-Link.
+3.  *(Opcional)* **Ollama** corriendo localmente para el módulo de lenguaje.
 
-### Ejecución
-
-Clona el repositorio y lanza el cuerpo principal:
+### Ejecución Completa
 
 ```bash
-git clone https://github.com/RGBcript/G.Genulse-Arcodular.git
-cd G.Genulse-Arcodular
+# Terminal 1: El Cerebro
+cargo run -p arcodular
 
-# Ejecutar el sistema (asegúrate de estar en la raíz del workspace)
-cargo run
+# Terminal 2: La Interfaz
+cd togen/www
+npm run dev
 ```
-
-*Si usas VS Code, puedes usar el **Task Runner** integrado.*
 
 ---
 

@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
-import { FileText, Image, Music, MousePointerClick, Keyboard, Code, FileUp, FileDown } from 'lucide-react'
+import { FileText, Image, Music, MousePointerClick, Code, FileUp, BrainCircuit } from 'lucide-react'
 import init, {
   togen_from_string,
   togen_from_action,
   togen_from_code,
   togen_from_bytes_image,
-  togen_from_bytes_audio,
-  ToGen
-} from '../pkg/togen.js'
+  togen_from_bytes_audio
+} from '../pkg/genesis_togenizer.js'
+import GenesisGraph from './components/GenesisGraph'
 
 // Inicializar WASM
 await init()
@@ -27,7 +27,7 @@ export default function App() {
   const [isDragging, setIsDragging] = useState(false)
   const [fileName, setFileName] = useState('')
   const [fileType, setFileType] = useState('')
-  const [activeTab, setActiveTab] = useState<'text' | 'file'>('text')
+  const [activeTab, setActiveTab] = useState<'text' | 'file' | 'visual'>('text')
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -219,10 +219,21 @@ export default function App() {
             <FileUp className="w-4 h-4" />
             File Upload
           </button>
+          <button
+            className={`px-4 py-2 flex items-center gap-2 ${activeTab === 'visual' ? 'border-b-2 border-cyan-400 text-cyan-400' : 'text-gray-400'}`}
+            onClick={() => setActiveTab('visual')}
+          >
+            <BrainCircuit className="w-4 h-4" />
+            Neuro-Link
+          </button>
         </div>
 
         {/* Input Area */}
-        {activeTab === 'text' ? (
+        {activeTab === 'visual' ? (
+          <div className="mb-6 h-[600px] bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
+             <GenesisGraph />
+          </div>
+        ) : activeTab === 'text' ? (
           <div className="mb-6">
             <textarea
               className="w-full h-32 p-4 bg-gray-800 border border-gray-700 rounded-lg text-white font-mono resize-none focus:outline-none focus:border-cyan-400"

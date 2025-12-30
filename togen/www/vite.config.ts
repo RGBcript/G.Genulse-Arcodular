@@ -11,6 +11,6 @@ export default defineConfig({
     topLevelAwait()
   ],
   optimizeDeps: {
-    exclude: ['../pkg/togen.js']
+    exclude: ['../pkg/genesis_togenizer.js']
   }
 })

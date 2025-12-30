@@ -172,11 +172,47 @@ impl ToGen {
     }
 
     fn calculate_simhash(input: &str) -> u128 {
-        let mut hash = 0u32;
-        for byte in input.bytes() {
-            hash = hash.wrapping_mul(31).wrapping_add(byte as u32);
+        // Implementación básica de SimHash (Locality Sensitive Hashing)
+        // 1. Tokenizar en trigramas
+        // 2. Hashear cada trigrama
+        // 3. Acumular vectores
+        
+        let mut v = [0i32; 32];
+        let bytes = input.as_bytes();
+        
+        if bytes.len() < 3 {
+            // Fallback para strings muy cortos
+            let mut hash = 0u32;
+            for byte in bytes {
+                hash = hash.wrapping_mul(31).wrapping_add(*byte as u32);
+            }
+            return hash as u128;
         }
-        hash as u128
+
+        for i in 0..bytes.len().saturating_sub(2) {
+            let trigram = &bytes[i..i+3];
+            let mut h = 0u32;
+            for b in trigram {
+                h = h.wrapping_mul(31).wrapping_add(*b as u32);
+            }
+            
+            for bit in 0..32 {
+                if (h >> bit) & 1 == 1 {
+                    v[bit] += 1;
+                } else {
+                    v[bit] -= 1;
+                }
+            }
+        }
+
+        let mut fingerprint = 0u32;
+        for bit in 0..32 {
+            if v[bit] > 0 {
+                fingerprint |= 1 << bit;
+            }
+        }
+        
+        fingerprint as u128
     }
 
     fn calculate_simhash_from_bytes(data: &[u8]) -> u128 {

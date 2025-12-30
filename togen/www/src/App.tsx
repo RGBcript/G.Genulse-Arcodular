@@ -67,8 +67,9 @@ export default function App() {
     }
 
     // 3. Heurística para Acciones
-    const actionIndicators = ['Click', 'Move', 'Key', 'Scroll', 'Drag', 'Press', 'Release', 'Type']
-    const isAction = text.length < 50 && actionIndicators.some(indicator => text.includes(indicator))
+    const actionIndicators = ['click', 'move', 'key', 'scroll', 'drag', 'press', 'release', 'type', 'action', 'wait', 'hover', 'focus', 'blur', 'select', 'submit']
+    const lowerText = text.toLowerCase()
+    const isAction = text.length < 50 && actionIndicators.some(indicator => lowerText.includes(indicator))
 
     if (isAction) {
         const hex = togen_from_action(text)

@@ -9,7 +9,9 @@
 \____//_____//_/ |_//_____/ /____//___//____/  
 ```
 
-![Status](https://img.shields.io/badge/Status-Active_v1.3-green) ![Lang](https://img.shields.io/badge/Language-Rust-orange) ![Arch](https://img.shields.io/badge/Architecture-Arcodular-blue)
+![Status](https://img.shields.io/badge/status-alpha-orange) ![Rust](https://img.shields.io/badge/rust-1.75%2B-blue) ![WASM](https://img.shields.io/badge/WASM-ready-green) ![Arch](https://img.shields.io/badge/Architecture-Arcodular-blue)
+
+> **⚠️ Demo Visual:** *[Inserta aquí tu GIF/Screenshot de `docs/demo.gif`]*
 
 **Genesis no es otro chatbot.** Es un organismo digital que **siente, duerme y aprende** en tiempo real.
 Olvídate de las matrices estáticas. Genesis utiliza **Neurobiología Simulada** (Spiking Neural Networks + Homeostasis) para correr en tu CPU/GPU con una fracción de la energía de un LLM tradicional.
@@ -40,8 +42,9 @@ npm run dev
 
 ## 🧬 ¿Por qué Genesis?
 
-### 1. Vida Artificial vs. Estadística
-Genesis no predice el siguiente token. **Tiene estados internos.**
+### 1. Biología, no estadística
+**Mientras ChatGPT predice la siguiente palabra, Genesis construye modelos internos del contexto.**
+Funciona como una sinapsis que se refuerza, no como un diccionario gigante.
 *   **Memoria a Corto Plazo:** Recuerda el contexto sin re-procesar todo el historial.
 *   **Sueño (Sleep Protocol):** Consolida aprendizajes (`a_fast` -> `w_slow`) y limpia toxinas cognitivas.
 *   **Eficiencia:** Usa cuantización BitNet (-1, 0, 1) y Spiking Networks.
